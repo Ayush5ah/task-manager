@@ -1,5 +1,7 @@
 Task Manager API
+
 Overview
+
 The Task Manager API is a backend application built using Node.js and Express.js for managing tasks. It provides a RESTful API to handle user authentication, task management, and basic CRUD operations. The application uses MongoDB for data storage and JWT for secure authentication.
 
 This API can be used in conjunction with a front-end application to create, read, update, and delete tasks, as well as register and log in users.
