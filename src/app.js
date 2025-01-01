@@ -19,6 +19,9 @@ app.get('/', (req, res) => {
     res.send('API is up and running!');
 });
 
+const PORT = process.env.PORT || 5000;  // Render will assign the port dynamically
+
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
@@ -34,5 +37,11 @@ mongoose
     .catch((err) => {
         console.error('MongoDB connection error:', err.message);
     });
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
 
 module.exports = app;
